@@ -1,7 +1,7 @@
 '''
 MIT License
 
-Copyright (c) 2017 Kyb3r
+Copyright (c) 2018 KenNg69
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -127,7 +127,7 @@ class Modmail(commands.Bot):
         ---------------
         Client is ready!
         ---------------
-        Author: Kyb3r#7220
+        Author: kenng#4401
         ---------------
         Logged in as: {self.user}
         User ID: {self.user.id}
@@ -152,7 +152,7 @@ class Modmail(commands.Bot):
         em = discord.Embed(color=0x00FFFF)
         em.set_author(name='Mod Mail - Help', icon_url=self.user.avatar_url)
         em.description = 'This bot is a python implementation of a stateless "Mod Mail" bot. ' \
-                         'Made by Kyb3r and improved by the suggestions of others. This bot ' \
+                         'Made by kenng and improved by the suggestions of others. This bot ' \
                          'saves no data and utilises channel topics for storage and syncing.' 
                  
 
@@ -168,7 +168,7 @@ class Modmail(commands.Bot):
                'Modifying the channel topic will also break the system.'
         em.add_field(name='Commands', value=cmds)
         em.add_field(name='Warning', value=warn)
-        em.add_field(name='Github', value='https://github.com/verixx/modmail')
+        em.add_field(name='Github', value='https://github.com/kenng69/modmailbotkenng')
         em.set_footer(text='Star the repository to unlock hidden features!')
 
         return em
@@ -178,7 +178,7 @@ class Modmail(commands.Bot):
     async def setup(self, ctx, *, modrole: discord.Role=None):
         '''Sets up a server for modmail'''
         if discord.utils.get(ctx.guild.categories, name='Mod Mail'):
-            return await ctx.send('This server is already set up.')
+            return await ctx.send('Everything has been configured!')
 
         categ = await ctx.guild.create_category(
             name='Mod Mail', 
